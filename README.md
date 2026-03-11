@@ -15,3 +15,7 @@ Many friends want to reach out to me and get to know me in seconds, so here is t
   - **Senior Open-Source Contributor** (Check my GitHub: jhfnetboy)
   - **Serial Entrepreneur (3.5x):** BSS360, 3KM, TQMall, SoulWallet. Currently launching Mycelium Protocol at MushroomDAO
   - **Top 5 GitHub Committer** in Thailand
+
+## Recent articles
+- [Docs](https://docs.google.com/spreadsheets/d/10ec6OyzmefxSMJUdjL-BF1TQtZ-ylZ-vGl4MF9PJ4jc/edit?usp=sharing)
+- [Slides](https://docs.google.com/spreadsheets/d/1SIL3_iLN61b3IwQGW91eY7hKfH4-16QQsTy3b-eBVJs/edit?usp=sharing)
