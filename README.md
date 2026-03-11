@@ -1,6 +1,6 @@
 # Abount me
-- [CV English](CV-en.md), no maintain after 2025
-- [CV 中文](CV-zh.md), no maintain after 2025
+- [CV English](CV-en.md), Maintenance ended in 2025
+- [CV 中文](CV-zh.md), Maintenance ended in 2025
 
 ## Quick Self-Introduction
 
