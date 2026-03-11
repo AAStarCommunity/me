@@ -19,3 +19,8 @@ Many friends want to reach out to me and get to know me in seconds, so here is t
 ## Recent articles
 - [Docs](https://docs.google.com/spreadsheets/d/10ec6OyzmefxSMJUdjL-BF1TQtZ-ylZ-vGl4MF9PJ4jc/edit?usp=sharing)
 - [Slides](https://docs.google.com/spreadsheets/d/1SIL3_iLN61b3IwQGW91eY7hKfH4-16QQsTy3b-eBVJs/edit?usp=sharing)
+
+## Contact me
+- [Telegram: @JasonJiao](t.me/JasonJiao)
+- [X.com/jhfnetboy](X.com/jhfnetboy)
+- [Github: jhfnetboy](github.com/jhfnetboy)
