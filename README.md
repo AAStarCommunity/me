@@ -1,3 +1,17 @@
 # Abount me
 - [CV English](CV-en.md)
 - [CV 中文](CV-zh.md)
+
+## Quick Self-Introduction
+
+Many friends want to reach out to me and get to know me in seconds, so here is the TL;DR:
+
+- **Jason Jiao**, an idealistic life hacker and community contributor, working on Digital Public Goods and Society Enhancement powered by Blockchain and AI.
+- **Keywords:**
+  - **20+ Years in Tech Management:** Product, Team, and Architecture
+  - **ZJU MBA** with years of reflection on management
+  - **P9 Level Executive** (M3 at JD.com, P9 at Schoolpal)
+  - **PhD Candidate** at Chiang Mai University
+  - **Senior Open-Source Contributor** (Check my GitHub: jhfnetboy)
+  - **Serial Entrepreneur (3.5x):** BSS360, 3KM, TQMall, SoulWallet. Currently launching Mycelium Protocol at MushroomDAO
+  - **Top 5 GitHub Committer** in Thailand
