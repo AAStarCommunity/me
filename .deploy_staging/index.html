@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huifeng (Jason) Jiao | Academic Profile</title>
+    <!-- Use a simple modern font for an academic feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            background-color: #f4f6f9;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Lora', serif;
+            color: #111;
+        }
+        a {
+            color: #2c5282;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 40px 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 50px;
+            border-top: 5px solid #2c5282;
+        }
+        /* Sidebar styling */
+        .sidebar {
+            flex: 0 0 250px;
+            text-align: center;
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit:cover;
+            margin-bottom: 15px;
+        }
+        .sidebar h2 {
+            font-size: 1.5rem;
+            margin: 10px 0 5px 0;
+        }
+        .sidebar p.title {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            text-align: left;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .contact-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-info li {
+            margin-bottom: 10px;
+        }
+        /* Main Content Styling */
+        .main-content {
+            flex: 1;
+        }
+        section {
+            margin-bottom: 35px;
+        }
+        section h2 {
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            color: #2d3748;
+        }
+        .entry {
+            margin-bottom: 20px;
+        }
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+        .entry-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #1a202c;
+        }
+        .entry-date {
+            font-size: 0.9rem;
+            color: #718096;
+            white-space: nowrap;
+        }
+        .entry-meta {
+            font-size: 0.95rem;
+            color: #4a5568;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        .entry-desc {
+            font-size: 0.95rem;
+        }
+        .publication-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .publication-list li {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .publication-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2c5282;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        .pub-title {
+            font-weight: 600;
+        }
+        .pub-authors {
+            font-size: 0.95rem;
+            color: #4a5568;
+        }
+        .pub-venue {
+            font-style: italic;
+            font-size: 0.95rem;
+            color: #2d3748;
+        }
+        .pub-links a {
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-right: 15px;
+            color: #fff;
+            background-color: #4299e1;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+        .pub-links a:hover {
+            background-color: #2b6cb0;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 30px 20px;
+                margin: 0;
+            }
+            .sidebar {
+                flex: none;
+                padding-bottom: 20px;
+            }
+        }
+        /* Lightbox Style */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+        .clickable-img {
+            cursor: zoom-in;
+            transition: transform 0.2s;
+        }
+        .clickable-img:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar / Profile -->
+    <aside class="sidebar">
+        <img src="jhfnetboy.jpeg" alt="Huifeng (Jason) Jiao" class="profile-img">
+        <h2>Huifeng Jiao</h2>
+        <p class="title">PhD Candidate in Digital Innovation<br>Chiang Mai University</p>
+        
+        <div class="contact-info">
+            <ul>
+                <li>🏠 <a href="index.html">Academic Profile</a></li>
+                <li>🔬 <a href="jlab.html">About jLab</a></li>
+                <li>📧 <a href="mailto:jhfnetboy@gmail.com">jhfnetboy@gmail.com</a></li>
+                <li>🐙 <a href="https://github.com/jhfnetboy" target="_blank">github.com/jhfnetboy</a></li>
+                <li>📝 <a href="https://blog.jlab.tech" target="_blank">blog.jlab.tech</a></li>
+                <li>🏫 <a href="https://cmuba.org" target="_blank">cmuba.org</a></li>
+                <li>🌐 <a href="https://aastar.io" target="_blank">aastar.io</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p><strong>I am an idealistic life hacker and community contributor, working on Digital Public Goods and Society Enhancement powered by Blockchain and AI.</strong></p>
+
+            <p>I am currently a PhD Candidate in Digital Innovation at Chiang Mai University, Thailand. My research primarily focuses on <strong>Blockchain Account Security</strong>, <strong>Ethereum Account Abstraction (ERC-4337)</strong>, and decentralized human-computer interaction paradigms.</p>
+            <p>I am also the founder of the AAStar Community and the Chiang Mai University Blockchain Association (CMUBA), dedicated to promoting blockchain education, open-source development, and pushing the boundaries of Web3 accessibility and mass adoption.</p>
+
+            <h3>Quick Facts</h3>
+            <ul style="margin-top: 10px;">
+                <li><strong>20+ Years in Tech Management:</strong> Extensive experience in Product, Team, and Architecture</li>
+                <li><strong>ZJU MBA</strong> with years of reflection on management paradigms</li>
+                <li><strong>P9 Level Executive:</strong> M3 at JD.com, P9 at Schoolpal</li>
+                <li><strong>Serial Entrepreneur (3.5x):</strong> Founded BSS360, 3KM, TQMall, SoulWallet. Currently launching Mycelium Protocol at MushroomDAO</li>
+                <li><strong>Top 7 GitHub Committer:</strong> <a href="https://committers.top/thailand_public" target="_blank">Ranked among the top open-source contributors in Thailand</a></li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">Ph.D. in Digital Innovation</div>
+                    <div class="entry-date">2022 &ndash; Present</div>
+                </div>
+                <div class="entry-meta">Chiang Mai University, Thailand</div>
+                <div class="entry-desc">
+                    Dissertation: <em>"Blockchain Account: Credential Control Balance"</em><br>
+                    Supervisors: Dr. Nathapon Udomlertsakul, Dr. Anukul Tamprasirt
+                </div>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">M.S. in Information Systems / Quant. Analysis</div>
+                    <div class="entry-date">2016 &ndash; 2019</div>
+                </div>
+                <div class="entry-meta">Zhejiang University, China</div>
+                <div class="entry-desc">
+                    Thesis: <em>"Study on the Influence of Social Network Factors on Individuals' Value"</em>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications & Documents</h2>
+            <ul class="publication-list">
+                <!-- TICC 2024 -->
+                <li>
+                    <div class="pub-title">Blockchain Account: Credential Control Balance</div>
+                    <div class="pub-authors">Huifeng Jiao</div>
+                    <div class="pub-venue">Proceedings of TICC-2024 (Technology, Innovation, Creativity and Change Conference)</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2402.10616" target="_blank">arXiv</a>
+                        <a href="./papers/Final-FullPaper-TICC2024_ICDI_CMU_Jiao_HuiFengV1.3.pdf" target="_blank">PDF Copy</a>
+                        <a href="./papers/TICC-Jason-V0.35.pptx" target="_blank">Presentation (PPTX)</a>
+                    </div>
+                </li>
+                <!-- Proposal Examination -->
+                <li>
+                    <div class="pub-title">Ph.D. Proposal Examination Document</div>
+                    <div class="pub-authors">Huifeng Jiao</div>
+                    <div class="pub-venue">Digital Innovation, Chiang Mai University (2024)</div>
+                    <div class="pub-links">
+                        <a href="./papers/PE-Poposal-Examination-Huifeng-Jiao-V0.18.pdf" target="_blank">PE Report PDF</a>
+                        <a href="./papers/PE-v0.28.pptx" target="_blank">PE Defense (PPTX)</a>
+                    </div>
+                </li>
+                <!-- Masters Thesis -->
+                <li>
+                    <div class="pub-title">Study on the Influence of Social Network Factors on Individuals' Value</div>
+                    <div class="pub-authors">Huifeng Jiao</div>
+                    <div class="pub-venue">Master's Thesis, Zhejiang University (2019)</div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="research">
+            <h2>Research Experience</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">Founder & Lead Researcher</div>
+                    <div class="entry-date">2023 &ndash; Present</div>
+                </div>
+                <div class="entry-meta">AAStar Community</div>
+                <div class="entry-desc">
+                    Leading an open-source research initiative focused on Ethereum Account Abstraction. Developing EIP-4337 implementations, exploring gas optimization, self-custodial account solutions, and social recovery mechanisms.
+                </div>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">Founder & Director</div>
+                    <div class="entry-date">2022 &ndash; Present</div>
+                </div>
+                <div class="entry-meta">Chiang Mai University Blockchain Association (CMUBA)</div>
+                <div class="entry-desc">
+                    Established the first comprehensive blockchain research and education association at CMU. Leading institutional research on blockchain applications and organizing academic workshops.
+                </div>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">Co-founder & CTO</div>
+                    <div class="entry-date">2022 &ndash; 2023</div>
+                </div>
+                <div class="entry-meta">SoulWallet</div>
+                <div class="entry-desc">
+                    Co-founded and led technical development of an ERC-4337 smart contract wallet. Won first prize at the Ethereum Hackathon (Account Abstraction category, Oct 2022).
+                </div>
+            </div>
+            <h3 style="margin-top: 25px;">jLab & AirAccount Status</h3>
+            <p>I also run the <a href="jlab.html"><strong>jLab Personal Research Laboratory</strong></a>. Here are glimpses of our Docker cluster workloads and the AirAccount KMS Dashboard:</p>
+            <div style="display:flex; flex-direction:column; gap:15px; margin-top:10px;">
+                <img src="https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202603231656652.png" alt="Docker Containers Overview" class="clickable-img" onclick="openLightbox(this.src)" />
+                <img src="https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202603231656654.png" alt="AirAccount KMS" class="clickable-img" onclick="openLightbox(this.src)" />
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Scanning the QR code to reach me on X (Twitter):</p>
+            <img src="https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202603150832344.png" alt="Twitter QR Code" class="clickable-img qr-code" onclick="openLightbox(this.src)" />
+        </section>
+
+    </main>
+</div>
+
+<div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" alt="Full Screen Preview" />
+</div>
+
+<script>
+    function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').style.display = 'flex';
+    }
+</script>
+
+</body>
+</html>
