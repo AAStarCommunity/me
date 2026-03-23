@@ -10,14 +10,10 @@ echo "🚀 Preparing deployment for Cloudflare Pages: $PROJECT_NAME..."
 rm -rf $DEPLOY_DIR
 mkdir -p $DEPLOY_DIR
 
-# 2. Copy only static assets (HTML, Images, PDFs, PPTXs)
-echo "📦 Collecting static assets..."
+# 2. Copy only static assets (ONLY HTML and JPEG as requested)
+echo "📦 Collecting static assets (index.html, jlab.html, and images)..."
 cp *.html $DEPLOY_DIR/ 2>/dev/null
 cp jhfnetboy.jpeg $DEPLOY_DIR/ 2>/dev/null
-if [ -d "papers" ]; then
-    mkdir -p $DEPLOY_DIR/papers
-    cp -r papers/* $DEPLOY_DIR/papers/ 2>/dev/null
-fi
 
 # 3. Deploy using Wrangler
 # Note: This assumes wrangler is installed and authenticated
