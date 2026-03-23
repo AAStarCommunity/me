@@ -162,9 +162,17 @@
             <h3>Running Docker Environments</h3>
             <p>The lab operates two primary Docker container environments to facilitate hardware security developments:</p>
             <ul>
-                <li><strong>OP-TEE (QEMU Simulator):</strong> Used specifically for developing and compiling ARMv8 Trusted Applications. For security purposes, this environment runs exclusively on the local network.</li>
-                <li><strong>ARMv7 DK2 Development:</strong> Used for building applications targeting the physical STM32 board. This environment is exposed to the public internet for remote debugging, stringently secured by a password and restricted to only two authorized keys. Dashboard statistics for this node can be viewed at <a href="https://kms1.aastar.io" target="_blank">kms1.aastar.io</a>.</li>
+                <li>
+                    <strong>OP-TEE (QEMU Simulator):</strong> Used specifically for developing and compiling ARMv8 Trusted Applications. For security purposes, this environment runs exclusively on the local network.
+                </li>
+                <li>
+                    <p style="margin: 0;"><strong>ARMv7 DK2 Development:</strong> Used for building applications targeting the physical STM32 board. This environment is exposed to the public internet for remote debugging, stringently secured by a password and restricted to only two authorized keys. Dashboard statistics for this node can be viewed at <a href="https://kms1.aastar.io" target="_blank">kms1.aastar.io</a>.</p>
+                    <img src="https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202603231608562.png" alt="KMS1 Dashboard" style="width: 45%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 10px; margin-bottom: 5px;" />
+                </li>
             </ul>
+            <p style="margin-top: 20px;"><strong>Docker Dashboard Overview:</strong><br>
+            <img src="https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202511161401453.png" alt="Docker Desktop Containers" style="width: 45%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 5px;" />
+            </p>
 
             <h3>Related Open-Source Repositories</h3>
             <ul>
@@ -172,12 +180,6 @@
                 <li>🐙 <a href="https://github.com/AAStarCommunity/aastar-sdk" target="_blank">AAStarCommunity / aastar-sdk</a></li>
                 <li>🐙 <a href="https://github.com/jhfnetboy/STM32MP157F-DK2" target="_blank">jhfnetboy / STM32MP157F-DK2</a></li>
             </ul>
-
-            <h3>Lab Gallery</h3>
-            <div class="gallery">
-                <img src="https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202511161401453.png" alt="jLab Setup" />
-                <img src="https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202603231608562.png" alt="jLab Dashboard and Interface" />
-            </div>
         </section>
     </main>
 </div>
