@@ -116,6 +116,34 @@
                 padding-bottom: 20px;
             }
         }
+        /* Lightbox Style */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+        .clickable-img {
+            cursor: zoom-in;
+            transition: transform 0.2s;
+        }
+        .clickable-img:hover {
+            transform: scale(1.02);
+        }
     </style>
 </head>
 <body>
@@ -167,11 +195,11 @@
                 </li>
                 <li>
                     <p style="margin: 0;"><strong>ARMv7 DK2 Development:</strong> Used for building applications targeting the physical STM32 board. This environment is exposed to the public internet for remote debugging, stringently secured by a password and restricted to only two authorized keys. Dashboard statistics for this node can be viewed at <a href="https://kms1.aastar.io" target="_blank">kms1.aastar.io</a>.</p>
-                    <img src="https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202603231656654.png" alt="KMS1 Dashboard" style="width: 45%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 10px; margin-bottom: 5px;" />
+                    <img src="https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202603231656654.png" alt="KMS1 Dashboard" class="clickable-img" style="width: 45%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 10px; margin-bottom: 5px;" onclick="openLightbox(this.src)" />
                 </li>
             </ul>
             <p style="margin-top: 20px;"><strong>Docker Dashboard Overview:</strong><br>
-            <img src="https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202603231656652.png" alt="Docker Desktop Containers" style="width: 45%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 5px;" />
+            <img src="https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202603231656652.png" alt="Docker Desktop Containers" class="clickable-img" style="width: 45%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 5px;" onclick="openLightbox(this.src)" />
             </p>
 
             <h3>Related Open-Source Repositories</h3>
@@ -183,6 +211,17 @@
         </section>
     </main>
 </div>
+
+<div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" alt="Full Screen Preview" />
+</div>
+
+<script>
+    function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').style.display = 'flex';
+    }
+</script>
 
 </body>
 </html>
