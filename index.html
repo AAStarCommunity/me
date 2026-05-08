@@ -156,6 +156,25 @@
             background-color: #2b6cb0;
             text-decoration: none;
         }
+        .pub-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .badge-preprint {
+            background-color: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fcd34d;
+        }
+        .badge-published {
+            background-color: #d1fae5;
+            color: #065f46;
+            border: 1px solid #6ee7b7;
+        }
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -231,7 +250,7 @@
 
             <h3>Quick Facts</h3>
             <ul style="margin-top: 10px;">
-                <li><strong>20+ Years in Tech Management:</strong> Extensive experience in Product, Team, and Architecture</li>
+                <li><strong>18+ Years in Tech Management:</strong> Extensive experience in Product, Team, and Architecture</li>
                 <li><strong>ZJU MBA</strong> with years of reflection on management paradigms</li>
                 <li><strong>P9 Level Executive:</strong> M3 at JD.com, P9 at Schoolpal</li>
                 <li><strong>Serial Entrepreneur (3.5x):</strong> Founded BSS360, 3KM, TQMall, SoulWallet. Currently launching Mycelium Protocol at MushroomDAO</li>
@@ -267,9 +286,25 @@
         <section id="publications">
             <h2>Selected Publications & Documents</h2>
             <ul class="publication-list">
+                <!-- SuperPaymaster preprint 2026 -->
+                <li>
+                    <div class="pub-title">
+                        SuperPaymaster: Eliminating Centralized Signer Authority via Asset-Oriented Abstraction to Reconcile Usability and Decentralization in Account Abstraction
+                        <span class="pub-badge badge-preprint">Under Review</span>
+                    </div>
+                    <div class="pub-authors">Huifeng Jiao</div>
+                    <div class="pub-venue">arXiv:2605.05774 (2026) &mdash; Submitted to <em>Ledger</em></div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2605.05774" target="_blank">arXiv</a>
+                        <a href="https://arxiv.org/pdf/2605.05774" target="_blank">PDF</a>
+                    </div>
+                </li>
                 <!-- TICC 2024 -->
                 <li>
-                    <div class="pub-title">Blockchain Account: Credential Control Balance</div>
+                    <div class="pub-title">
+                        Blockchain Account: Credential Control Balance
+                        <span class="pub-badge badge-published">Published</span>
+                    </div>
                     <div class="pub-authors">Huifeng Jiao</div>
                     <div class="pub-venue">Proceedings of TICC-2024 (Technology, Innovation, Creativity and Change Conference)</div>
                     <div class="pub-links">

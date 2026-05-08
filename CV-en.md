@@ -63,6 +63,11 @@
 
 ### **Publications**
 
+#### **Preprints / Under Review**
+- **Jiao, H.** (2026). "SuperPaymaster: Eliminating Centralized Signer Authority via Asset-Oriented Abstraction to Reconcile Usability and Decentralization in Account Abstraction." *arXiv preprint arXiv:2605.05774*. Under review at *Ledger*.
+  - [arXiv: https://arxiv.org/abs/2605.05774](https://arxiv.org/abs/2605.05774)
+  - [PDF](https://arxiv.org/pdf/2605.05774)
+
 #### **Conference Papers**
 - **Jiao, H.** (2024). "Blockchain Account: Credential Control Balance." *Proceedings of TICC-2024 (Technology, Innovation, Creativity and Change Conference)*. 
   - [ArXiv: https://arxiv.org/abs/2402.10616](https://arxiv.org/abs/2402.10616)
@@ -259,4 +264,4 @@
 
 ---
 
-*Last Updated: July 2025* 
+*Last Updated: May 2026* 
