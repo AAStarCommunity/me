@@ -14,7 +14,7 @@ Many friends want to reach out to me and get to know me in seconds, so here is t
   - **PhD Candidate** at Chiang Mai University
   - **Senior Open-Source Contributor** (Check my GitHub: jhfnetboy)
   - **Serial Entrepreneur (3.5x):** BSS360, 3KM, TQMall, SoulWallet. Currently launching Mycelium Protocol at MushroomDAO
-  - **[Top ~~5~~7 GitHub Committer**](https://committers.top/thailand_public) in Thailand
+  - **[Top 3 GitHub Committer**](https://committers.top/thailand_public) in Thailand ([Post on X](https://x.com/jhfnetboy/status/2109497226884194781))
 
 ## Recent articles
 - [Docs](https://docs.google.com/spreadsheets/d/10ec6OyzmefxSMJUdjL-BF1TQtZ-ylZ-vGl4MF9PJ4jc/edit?usp=sharing)

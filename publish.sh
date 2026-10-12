@@ -10,15 +10,15 @@ echo "🚀 Preparing deployment for Cloudflare Pages: $PROJECT_NAME..."
 rm -rf $DEPLOY_DIR
 mkdir -p $DEPLOY_DIR
 
-# 2. Copy only static assets (ONLY HTML and JPEG as requested)
-echo "📦 Collecting static assets (index.html, jlab.html, and images)..."
+# 2. Copy only static assets (HTML and images)
+echo "📦 Collecting static assets (HTML and images)..."
 cp *.html $DEPLOY_DIR/ 2>/dev/null
-cp jhfnetboy.jpeg $DEPLOY_DIR/ 2>/dev/null
+cp *.jpeg *.jpg *.png $DEPLOY_DIR/ 2>/dev/null
 
 # 3. Deploy using Wrangler
 # Note: This assumes wrangler is installed and authenticated
 echo "☁️  Uploading to Cloudflare Pages..."
-npx wrangler pages deploy $DEPLOY_DIR --project-name $PROJECT_NAME
+pnpm dlx wrangler pages deploy $DEPLOY_DIR --project-name $PROJECT_NAME
 
 # 4. Cleanup
 echo "🧹 Cleaning up..."
