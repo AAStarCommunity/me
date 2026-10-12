@@ -214,9 +214,73 @@
         .clickable-img:hover {
             transform: scale(1.02);
         }
+    
+        /* Language Switcher */
+        .lang-switcher {
+            position: fixed;
+            top: 16px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            border: 1px solid #cbd5e0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-radius: 24px;
+            padding: 4px 8px;
+            gap: 4px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 14px;
+            cursor: pointer;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: #4a5568;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+        .lang-btn:hover {
+            background: #edf2f7;
+            color: #2b6cb0;
+        }
+        .lang-btn.active {
+            background: #2c5282;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        @media (max-width: 640px) {
+            .lang-switcher {
+                top: 10px;
+                right: 10px;
+                padding: 2px 6px;
+            }
+            .lang-btn {
+                padding: 3px 6px;
+                font-size: 0.75rem;
+            }
+        }
+        /* Google Translate clean overrides */
+        .goog-te-banner-frame { display: none !important; }
+        body { top: 0px !important; position: static !important; }
+        #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
+        .goog-text-highlight { background: transparent !important; box-shadow: none !important; }
+
     </style>
 </head>
 <body>
+
+<div class="lang-switcher notranslate" translate="no">
+    <span style="font-size: 0.85rem; margin-right: 2px;">🌐</span>
+    <button type="button" class="lang-btn" onclick="setLanguage('en')">EN</button>
+    <button type="button" class="lang-btn" onclick="setLanguage('zh-CN')">中文</button>
+    <button type="button" class="lang-btn" onclick="setLanguage('th')">ไทย</button>
+</div>
+<div id="google_translate_element" style="display:none;"></div>
+
 
 <div class="container">
     <!-- Sidebar / Profile -->
@@ -392,6 +456,61 @@
         document.getElementById('lightbox').style.display = 'flex';
     }
 </script>
+
+
+<!-- Google Translate Automatic Translation Engine -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,zh-CN,th',
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+
+function setLanguage(lang) {
+    var host = window.location.hostname;
+    var cookieVal = '/en/' + lang;
+    if (lang === 'en') {
+        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=' + host + '; path=/;';
+        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=.' + host + '; path=/;';
+        window.location.reload();
+        return;
+    }
+    document.cookie = 'googtrans=' + cookieVal + '; path=/;';
+    document.cookie = 'googtrans=' + cookieVal + '; domain=' + host + '; path=/;';
+    document.cookie = 'googtrans=' + cookieVal + '; domain=.' + host + '; path=/;';
+
+    var teCombo = document.querySelector('.goog-te-combo');
+    if (teCombo) {
+        teCombo.value = lang;
+        teCombo.dispatchEvent(new Event('change'));
+    } else {
+        window.location.reload();
+    }
+    updateActiveLangBtn(lang);
+}
+
+function updateActiveLangBtn(lang) {
+    var btns = document.querySelectorAll('.lang-btn');
+    btns.forEach(function(btn) {
+        btn.classList.remove('active');
+        if ((lang === 'en' && btn.innerText.trim() === 'EN') ||
+            (lang === 'zh-CN' && btn.innerText.trim() === '中文') ||
+            (lang === 'th' && btn.innerText.trim() === 'ไทย')) {
+            btn.classList.add('active');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var m = document.cookie.match(/googtrans=\/[^/]+\/([^;]+)/);
+    var currentLang = m ? m[1] : 'en';
+    updateActiveLangBtn(currentLang);
+});
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
