@@ -18,7 +18,7 @@ cp jhfnetboy.jpeg $DEPLOY_DIR/ 2>/dev/null
 # 3. Deploy using Wrangler
 # Note: This assumes wrangler is installed and authenticated
 echo "☁️  Uploading to Cloudflare Pages..."
-npx wrangler pages deploy $DEPLOY_DIR --project-name $PROJECT_NAME
+pnpm dlx wrangler pages deploy $DEPLOY_DIR --project-name $PROJECT_NAME
 
 # 4. Cleanup
 echo "🧹 Cleaning up..."
